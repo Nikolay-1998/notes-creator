@@ -1,2 +1,2 @@
 # notes-creator
-A full website to built notes
+A full website to built notes built in flask
