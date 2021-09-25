@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block title %}Notas{% endblock %}
+{% block content %}
+    <div id="div_table">
+        <table id="notas">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nota</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- TODO: Loop through the database entries to display them in this table -->
+                {% for nota in notas %}
+                    <tr>
+                        <td>{{nota['id']}}</td>
+                        <td>{{nota['nota']}}</td>
+
+                        <td>
+                            <form action="/eliminar" method="POST">
+                                <input type="hidden" id="nota_id" name="nota_id" value="{{nota['id']}}">
+                                <input type="submit" name="eliminar" value="Eliminar">
+                            </form>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <form action="/notas" method="POST" name="notes">
+        <p><textarea name="nota" rows="5" cols="50" placeholder="Escriba su nota"></textarea></p>
+        <br/>
+        <p><input type="submit" class="btn" name="enviar" id="añadir_nota" value="Añadir"/></p>
+    </form>
+    <br/>
+    <a href="/">return main page</a>
+    <br>
+{% endblock %}

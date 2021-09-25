@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block title %}Registro de usuarios{% endblock %}
+{% block content %}
+    <form action="/registro" method="post">
+        <input type="text" placeholder="email@provedor.com" id="correo" name="correo" required/>
+        <br/>
+        <br/>
+        <input type="password" placeholder="******" id="contra" name="contra" required/>
+        <br/>
+        <br/>
+        <input type="password" placeholder="******" id="contra_copia" name="contra_copia" required/>
+        <br/>
+        <br/>
+        <imput type="fecha" placeholder="DD/MM/AA" id="date" nombre="date" required/>
+        <input type="submit" class="btn" id="send-signup" name="signup" value="Registrar" />
+    </form>
+    <br/>
+    {{message}}
+    <br/>
+    <a href="/">Return main page</a>
+{% endblock %}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles.css')}}" media="screen"/>
+    <title>Page Title</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+</head>
+<body>
+    <div class="wrapper">
+        <ul class="mainMenu">
+            <li class="item" id="account">
+                <a href="#account" class="btn"><i class="fas fa-user-circle"></i>My Account</a>
+                <div class="subMenu" id="Contenedor">
+                    <div class="Icon">
+                        <span class="glyphicon glyphicon-user"></span>
+                    </div>
+                    {{session.correo}}.
+                </div>
+            </li>
+            <li class="item" id="about">
+                <a href="#about" class="btn"><i class="fas fa-address-card"></i>About</a>
+                <div class="subMenu">
+                    <a href="">what is note creator</a>
+                </div>
+            </li>
+            <li class="item" id="support">
+                <a href="#support" class="btn"><i class="fas fa-info"></i>Support</a>
+                <div class="subMenu">
+                    <a href="">My profile</a>
+                </div>
+            </li>
+            <li class="item">
+                <a href="/notas" class="btn"><i class="fas fa-info"></i>Notes</a>
+            </li>
+            <li class="item">
+                <a href="/logout" class="btn"><i class="fas fa-sign-out-alt"></i>Log Out</a>
+            </li>
+        </ul>
+    </div>
+
+
+    <footer>
+        <p>
+		Created by <i class="fa fa-heart"></i>
+		<a target="_blank" href="#">Nikolay</a>
+		<br>
+		<a target="_blank" href="#">(Original web style desing provide by https://codepen.io/ahmadbassamemran/pen/zXwZKo)</a>
+		<br>
+		<a target="_blank" href="#">(Original tables desing provide by https://www.w3schools.com/html/html_tables.asp)</a>
+		<br>
+		<a target="_blank" href="#">@All desings are free to use online</a>
+		<br>
+		<a target="_blank" href="#">I do not receive any credit for the style of the page is for educational purposes</a>
+	    </p>
+    </footer>
+</body>
+</html>

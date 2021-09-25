@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block title %}Notas{% endblock %}
+{% block content %}
+    <form action="/login" method="post" name="FormEntrar">
+        <div>
+            <input type="email" name="correo" placeholder="Correo" id="Correo" required />
+        </div>
+        <br>
+        <div>
+            <input type="password" name="contra" placeholder="******" required />
+        </div>
+        <br>
+        <input type="submit" class="btn" id="IngresoLog" value="Ingresar"/>
+    </form>
+    <br/>
+    <div class="opcioncontra"><a href="/registro">Registrarse</a></div>
+    <br/>
+    {{message}}
+{% endblock %}

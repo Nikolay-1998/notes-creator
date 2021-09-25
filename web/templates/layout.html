@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+         <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles.css')}}" media="screen"/>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>Notas</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="ContentForm">
+                <h1>{% block title %}{% endblock %}</h1>
+                <br/>
+                {% block content%}{% endblock %}
+            </div>
+        </div>
+        <footer>
+        <p>
+		Created by <i class="fa fa-heart"></i>
+		<a target="_blank" href="#">Nikolay</a>
+		<br>
+		<a target="_blank" href="#">(Original web style desing provide by https://codepen.io/ahmadbassamemran/pen/zXwZKo)</a>
+		<br>
+		<a target="_blank" href="#">(Original tables desing provide by https://www.w3schools.com/html/html_tables.asp)</a>
+		<a target="_blank" href="#">@All desings are free to use online</a>
+		<a target="_blank" href="#">(I do not receive any credit for the style of the page is for educational purposes)</a>
+	    </p>
+    </footer>
+    </body>
+</html>
